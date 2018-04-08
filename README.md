@@ -15,15 +15,15 @@ Sis-tools utilizza python 2.7. Gli scripts sono stati "testati"(:wink:) solo su 
 Queste sono le dipendenze che servono.
 
 ```sh
-$ sudo apt-get install expect
-$ sudo apt-get install python-pip
-$ sudo apt-get install graphviz
-$ pip install graphviz
+sudo apt-get install expect
+sudo apt-get install python-pip
+sudo apt-get install graphviz
+pip install graphviz
 ```
 
 Una volta che tutte sono state installate potete usare questo link per clonare e aggiungere al path gli scripts.
 ```sh
-$ git clone https://github.com/mattia98tr/sis-tools.git ~/.sis-tools && echo 'PATH=~/.sis-tools/:"$PATH"' >> ~/.bashrc && chmod +x -R ~/.sis-tools/
+git clone https://github.com/mattia98tr/sis-tools.git ~/.sis-tools && echo 'PATH=~/.sis-tools/:"$PATH"' >> ~/.bashrc && chmod +x -R ~/.sis-tools/
 ```
 
 Ora potete spostarvi nella vostra cartella del progetto e usare gli scripts.
@@ -31,7 +31,7 @@ Ora potete spostarvi nella vostra cartella del progetto e usare gli scripts.
 ### generate-stg
 
 ```sh
-$ generate-stg <fileFSM.blif>
+generate-stg <fileFSM.blif>
 ```
 Se tutto è andato a buon fine dovreste vedere nella cartella un file che contiene l'immagine. Il risultato sarà tipo quello seguente e ovviamente varierà a seconda del numero di nodi e dei collegamenti tra essi. (il risultato sembra migliore della generazione automatica di BVE :wink: )
 
@@ -40,14 +40,14 @@ Se tutto è andato a buon fine dovreste vedere nella cartella un file che contie
 ### minimize-fsm
 
 ```sh
-$ minimize-fsm <fileFSM.blif> <newfileFSM_min.blif>
+minimize-fsm <fileFSM.blif> <newfileFSM_min.blif>
 ```
 Ora dovreste trovarvi con questo nuovo file <newfileFSM_min.blif> che contiene la fsm minimizzata. 
 
 ### run-test-sis
 
 ```sh
-$ run-test-sis <test_in.txt> <test_out.txt>
+run-test-sis <test_in.txt> <test_out.txt>
 ```
 Il file test_in deve essere come da esempio. I simulate possono cambiare l'importante è che la prima e l'ultima riga siano queste. Le parentisi < > non vanno messe ma stanno solo ad indicare che lì dentro dovete mettere i vostri nomi dei file
 ```
