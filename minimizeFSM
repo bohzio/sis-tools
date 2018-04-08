@@ -4,6 +4,12 @@
 # Mattia Corradi - Dalla Chiara Michele #
 #########################################
 
+if {$argc != 1} {
+  puts "Numero di argomenti errato"
+  puts "Devi inserire come parametro il nome della fsm da minimizzare"
+  exit 1
+}
+
 set file_in [lindex $argv 0];
 set file_out [lindex $argv 1];
 
