@@ -52,7 +52,7 @@ except OSError:
      pass
 
 if os.path.isfile(input_file):
-    subprocess.call(['./runTestOnSis', input_file])
+    subprocess.call(['runTestOnSis', input_file])
 else:
     print_red("Il file di input non esiste")
     exit()

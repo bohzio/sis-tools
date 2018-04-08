@@ -126,28 +126,13 @@ def render_graph():
 
 styles = {
     'graph': {
-        'label': 'STG - Mattia Corradi Dalla Chiara Michele',
         'fontsize': '16',
-        'fontcolor': 'white',
-        'bgcolor': '#333333',
+        'fontcolor': 'black',
         'rankdir': 'BT',
         'splines': 'true',
         'overlap': 'false'
     },
-    'nodes': {
-        'fontname': 'Helvetica',
-        'shape': 'circle',
-        'fontcolor': 'white',
-        'color': 'white',
-        'style': 'filled',
-        'fillcolor': '#006699',
-    },
     'edges': {
-        'color': 'white',
-        'arrowhead': 'open',
-        'fontname': 'Courier',
-        'fontsize': '12',
-        'fontcolor': 'white',
         'arrowsize': '.5'
     }
 }
