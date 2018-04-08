@@ -33,7 +33,7 @@ Ora potete spostarvi nella vostra cartella del progetto e usare gli scripts.
 ```sh
 $ generate-stg <fileFSM.blif>
 ```
-Se tutto è andato a buon fine dovreste vedere nella cartella un file che contiene l'immagine. Il risultato sarà tipo quello seguente e ovviamente varierà a seconda del numero di nodi e dei collegamenti fra essi.
+Se tutto è andato a buon fine dovreste vedere nella cartella un file che contiene l'immagine. Il risultato sarà tipo quello seguente e ovviamente varierà a seconda del numero di nodi e dei collegamenti tra essi. (il risultato sembra migliore della generazione automatica di BVE :wink: )
 
 ![alt text](https://img.ziggi.org/k0BJhNeN.jpg)
 
