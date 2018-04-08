@@ -1,0 +1,129 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+#########################################
+# Mattia Corradi - Dalla Chiara Michele #
+#########################################
+
+import subprocess
+import os
+import sys
+
+def print_red(skk): print("\033[91m{}\033[00m" .format(skk))
+
+
+def print_green(skk): print("\033[92m{}\033[00m" .format(skk))
+
+
+file_result = 'result.log'
+
+if sys.argv[1] == '-h':
+
+    print("\nScript che testa partendo da un file di test fornito dal prof e da un file di risultati che contiene gli output corretti.\n")
+    print("Ricorda che il file di input oltre ai simulate dovrà contenere:")
+    print("1) come prima istruzione 'read_blif tuaFSMD.blif'")
+    print("2) come ultima istruzione 'quit'\n\n")
+
+    print("Esempio file input chiamato ti.txt:\n")
+    print("read_blif FSMD.blif\nsimulate 0 0 1 0 0 1 0 1 1 0 0 0 0\nsimulate 0 0 0 0 1 1 0 1 1 0 1 1 0\nsimulate 1 0 0 0 1 0 0 0 0 0 1 1 0\nquit\n\n")
+
+    print("Esempio file output chiamato to.txt:\n")
+    print("0   0   0   0   0\n0   0   0   0   0\n0   1   0   1   0\n\n")
+
+    print("Quindi alla file il primo file avrà 2 righe in più dell'altro. Se non è così il numero di test non combacia con l'output e il programma non funzionerà\n")
+
+    print("Comando:\n")
+    print("run-test-sis ti.txt to.txt \n\n")
+ 
+    exit()
+
+if len(sys.argv) != 3:
+    print_red("Numero dei parametri errati, devono essere 2!")
+    print_red("esempio: run-test test_in.txt test_out.txt")
+    exit()
+
+
+matching_file = sys.argv[2]
+input_file = sys.argv[1]
+
+try:
+     os.remove(file_result)
+except OSError:
+     pass
+
+if os.path.isfile(input_file):
+    subprocess.call(['./runTestOnSis', input_file])
+else:
+    print_red("Il file di input non esiste")
+    exit()
+
+
+try:
+    infile = open(file_result, 'r')
+except:
+    print_red("File {} non trovato (File generato usando il file di test fornito dal prof)".format(file_result))
+
+try:
+    matchingFile = open(matching_file, 'r')
+except:
+    print_red("File {} non trovato (File di verifica fornito dal prof)".format(matching_file))
+
+try:
+    inputFile = open(input_file, 'r')
+except:
+    print_red("File {} non trovato (File di verifica fornito dal prof)".format(input_file))
+
+
+results = []
+for line in infile:
+    app = line.strip().split()
+
+    if len(app) > 0:
+
+        if app[0] == "Outputs:":
+            del app[0]
+            results.append(app)
+
+matching = []
+
+for line in matchingFile:
+    app = line.strip().split()
+    matching.append(app)
+
+inputArray = []
+for line in inputFile:
+    app = line.strip().split()
+    del app[0]
+    inputArray.append(app)
+
+del inputArray[0]
+
+bad = 0
+ok = 0
+tot = len(results)
+totWatt = 0
+
+matching = [[int(y) for y in x] for x in matching]
+results = [[int(y) for y in x] for x in results]
+inputArray = [[int(y) for y in x] for x in inputArray]
+
+print
+
+for i in range(0, tot):
+
+    if matching[i] == results[i]:
+        print('{}) ok'.format(i+1))
+        print('input  {}'.format(inputArray[i]))
+        print('ris    {}'.format(results[i]))
+        ok += 1
+    else:
+
+        print_red('{}) bad'.format(i + 1))
+        print('input  {}'.format(inputArray[i]))
+        print('tuo    {}'.format(results[i]))
+        print('prof   {}'.format(matching[i]))
+
+
+
+print_green('\nOK {}/{}'.format(ok, tot))
+print_red('\nBAD {}/{}'.format(bad, tot))

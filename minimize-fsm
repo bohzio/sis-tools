@@ -5,8 +5,11 @@
 #########################################
 
 if {$argc != 2} {
+  puts "\033\[01;31m"
   puts "Numero di argomenti errato"
   puts "Devi inserire come parametro il nome della fsm da minimizzare e il nome del file di output"
+  puts "Ad esempio : minimize-fsm FSM.blif FSM_min.blif"
+  puts "\033\[0;0m"
   exit 1
 }
 
@@ -24,5 +27,11 @@ send "state_assign jedi\n"
 send "stg_to_network\n"
 send "wl $file_out\n"
 send "quit\n"
+
+
 interact
+
+puts "\033\[0;32m"
+puts "\n Questo script ha eseguito state_minimize, state_assign jedi e stg_to_network e salvato il risultato in $file_out"
+puts "\033\[0;0m"
 
