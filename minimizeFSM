@@ -4,9 +4,9 @@
 # Mattia Corradi - Dalla Chiara Michele #
 #########################################
 
-if {$argc != 1} {
+if {$argc != 2} {
   puts "Numero di argomenti errato"
-  puts "Devi inserire come parametro il nome della fsm da minimizzare"
+  puts "Devi inserire come parametro il nome della fsm da minimizzare e il nome del file di output"
   exit 1
 }
 
