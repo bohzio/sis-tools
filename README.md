@@ -3,10 +3,10 @@ Questo repository contiene degli scripts che ho utilizzato per l'elaborato SIS p
 Tutto è stato testato e utilizzato solamente su ubuntu 16.04
 
 Questi sono gli scripts:
-* **generate-stg** - Partendo dal file blif contenente la FSM genera in automatico un'immagine con il grafo degli stati
+* **generate-stg** - Partendo dal file blif contenente la FSM genera in automatico un'immagine con il grafo degli stati.
 * **minimize-fsm** - Minimizza in automatico il file blif contenente la FSM per poter testare velocemente le modifiche.
-    * Lo script esegue state_minimize, state_assign jedi e stg_to_network e salva in un nuovo file
-* **run-test-sis** - Esegue in automatico i test strutturando quelli falliti in tabella per poter visualizzare meglio gli errori
+    * Lo script esegue state_minimize, state_assign jedi e stg_to_network e salva in un nuovo file.
+* **run-test-sis** - Esegue in automatico i test strutturando quelli falliti in tabella per poter visualizzare meglio gli errori.
 
 ### Installazione
 
