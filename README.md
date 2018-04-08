@@ -70,6 +70,7 @@ Sono consapevole che con il tab il file di out non sia il massimo ma questo è i
 Alla fine basta aggiungere la prima e l'ultima istruzione nel file di input poi per il resto potete copiare i file del prof.
 
 Il risultato sarà questo:
+
 ![alt text](https://img.ziggi.org/cd0ZTdwj.jpg)
 
 
