@@ -8,6 +8,7 @@
 
 set file_in [lindex $argv 0];
 
+
 log_file result.log
 
 spawn sis

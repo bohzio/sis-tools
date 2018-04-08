@@ -20,7 +20,7 @@ try:
 except OSError:
      pass
 
-subprocess.call(['./runTEST.sh', input_file])
+subprocess.call(['./runTestOnSis.sh', input_file])
 
 watt = [0, 0, 0, 2000, 300, 1200, 1000, 2000, 1800, 240, 400, 200, 400]
 
