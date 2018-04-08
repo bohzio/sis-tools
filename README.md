@@ -16,7 +16,7 @@ Queste sono le dipendenze che servono.
 
 ```sh
 $ sudo apt-get install expect
-$ sudo apt-get install pip
+$ sudo apt-get install python-pip
 $ sudo apt-get install graphviz
 $ pip install graphviz
 ```
