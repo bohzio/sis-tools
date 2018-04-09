@@ -26,7 +26,7 @@ Una volta che tutte sono state installate potete usare questo link per clonare e
 ```sh
 git clone https://github.com/mattia98tr/sis-tools.git ~/.sis-tools && echo 'PATH=~/.sis-tools/:"$PATH"' >> ~/.bashrc && sudo chmod +x -R ~/.sis-tools/
 ```
-
+Chiudete e riaprite il terminale per caricare le modifiche della PATH.
 Ora potete spostarvi nella vostra cartella del progetto e usare gli scripts.
 
 ### generate-stg
