@@ -23,7 +23,7 @@ pip install graphviz
 
 Una volta che tutte sono state installate potete usare questo link per clonare e aggiungere al path gli scripts.
 ```sh
-git clone https://github.com/mattia98tr/sis-tools.git ~/.sis-tools && echo 'PATH=~/.sis-tools/:"$PATH"' >> ~/.bashrc && chmod +x -R ~/.sis-tools/
+git clone https://github.com/mattia98tr/sis-tools.git ~/.sis-tools && echo 'PATH=~/.sis-tools/:"$PATH"' >> ~/.bashrc && sudo chmod +x -R ~/.sis-tools/
 ```
 
 Ora potete spostarvi nella vostra cartella del progetto e usare gli scripts.
