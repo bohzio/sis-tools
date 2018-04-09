@@ -1,8 +1,8 @@
 # Sis-tools
-Questo repository contiene degli scripts che ho utilizzato per l'elaborato SIS per ottimizzare e velocizzare il workflow.
+Questo repository contiene degli script che ho utilizzato per l'elaborato SIS per ottimizzare e velocizzare il workflow.
 Tutto è stato testato e utilizzato solamente su ubuntu 16.04
 
-Questi sono gli scripts:
+Questi sono gli script:
 * **generate-stg** - Partendo dal file blif contenente la FSM genera in automatico un'immagine con il grafo degli stati.
 * **minimize-fsm** - Minimizza in automatico il file blif contenente la FSM per poter testare velocemente le modifiche.
     * Lo script esegue state_minimize, state_assign jedi e stg_to_network e salva in un nuovo file.
@@ -10,7 +10,7 @@ Questi sono gli scripts:
 
 ### Installazione
 
-Sis-tools utilizza python 2.7. Gli scripts sono stati "testati"(:wink:) solo su ubuntu, dovrebbero funzionare anche su osx però chissà, non avendo un Mac non posso testare. 
+Sis-tools utilizza python 2.7. Gli script sono stati "testati"(:wink:) solo su ubuntu, dovrebbero funzionare anche su osx però chissà, non avendo un Mac non posso testare. 
 
 Queste sono le dipendenze che servono.
 
@@ -22,12 +22,12 @@ sudo apt-get install git
 pip install graphviz
 ```
 
-Una volta che tutte sono state installate potete usare questo link per clonare e aggiungere al path gli scripts.
+Una volta che tutte sono state installate potete usare questo link per clonare e aggiungere al path gli script.
 ```sh
 git clone https://github.com/mattia98tr/sis-tools.git ~/.sis-tools && echo 'PATH=~/.sis-tools/:"$PATH"' >> ~/.bashrc && sudo chmod +x -R ~/.sis-tools/
 ```
 Chiudete e riaprite il terminale per caricare le modifiche della PATH.
-Ora potete spostarvi nella vostra cartella del progetto e usare gli scripts.
+Ora potete spostarvi nella vostra cartella del progetto e usare gli script.
 
 ### generate-stg
 Prima di tutto dovete modificare il file blif della FSM aggiungendo alla fine e all'inizio delle transizioni i marcatori #STG-START e #STG-STOP.
@@ -86,11 +86,11 @@ Il risultato sarà questo:
 
 
 
-### Todos
+### Todo
 
  - Fare dei test (almeno finti:smiley:)
  - Testare su osx e creare l'url di installazione per quella piattaforma
- - Aggiungere altri scripts, magari voi avete altre idee
+ - Aggiungere altri script, magari voi avete altre idee
 
 Se trovate errori fate pure una pull request o scrivetemi mattia.corradi.tr@gmail.com oppure contattatemi su telegram @mattia98tr
 
