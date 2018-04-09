@@ -12,6 +12,7 @@ import sys
 import os
 
 
+
 def print_red(skk): print("\033[91m {}\033[00m" .format(skk))
 
 
@@ -54,11 +55,11 @@ def parse_blif():
 
                 if start_pos is None:
                     print_red("Manca il marcatore #STG-START. Assicurati di metterlo nella riga precedente alle transizioni")
-                    exit()
+                    os._exit(1)
 
                 if stop_pos is None:
                     print_red("Manca il marcatore #STG-STOP. Assicurati di metterlo nella riga successiva alle transizioni")
-                    exit()
+                    os._exit(1)
 
                 lines = lines[start_pos:stop_pos]
 
